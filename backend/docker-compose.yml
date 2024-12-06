@@ -1,0 +1,38 @@
+services:
+  db:
+    container_name: chitchat_pg
+    image: postgres
+    ports:
+      - ${DATABASE_PORT}:${DATABASE_PORT}
+    # restart: always
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    env_file:
+      - .env
+    environment:
+      - POSTGRES_USER=${DATABASE_USER}
+      - POSTGRES_PASSWORD=${DATABASE_PASS}
+      - POSTGRES_DB=${DATABASE_NAME}
+
+  chitchat:
+    build: .
+    container_name: chitchat_api
+    depends_on:
+      - db
+    ports:
+      - ${PORT}:${PORT}
+    command: sh -c "yarn start:dev"
+    volumes:
+      - .:/usr/app
+    env_file:
+      - .env
+    environment:
+      - DATABASE_HOST
+      - DATABASE_USER
+      - DATABASE_PASS
+      - DATABASE_NAME
+      - DATABASE_PORT
+      - PORT
+
+volumes:
+  pgdata:
