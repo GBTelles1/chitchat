@@ -1,0 +1,22 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  gap: 1rem;
+  min-height: 100svh;
+  font-family: var(--font-geist-sans);
+  padding: 2rem;
+}
+
+.createChatLink {
+  padding: 0.5rem 1rem;
+  background: var(--light-gray);
+  color: var(--background);
+  border-radius: 8px;
+}
+
+.createChatLink:hover {
+  opacity: 80%;
+  transition: all 0.5s ease;
+}
