@@ -1,0 +1,18 @@
+.formWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.inputWrapper {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.loginFormLabel {
+  font-weight: 700;
+}
+
+.submitButton {
+  height: 2rem;
+}
