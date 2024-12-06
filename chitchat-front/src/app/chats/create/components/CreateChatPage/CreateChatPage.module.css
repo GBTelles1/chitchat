@@ -1,0 +1,18 @@
+.createChatForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  gap: 2rem;
+}
+
+.feedbackMessage {
+  height: 1.2rem;
+}
+
+@media only screen and (max-width: 426px) {
+  .createChatForm {
+    width: 100%;
+  }
+}
