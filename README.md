@@ -82,10 +82,11 @@ Certifique-se de ter os seguintes softwares instalados:
    ```bash
    docker-compose up -d
    ```
+   O servidor estará disponível no endereço `http://localhost:8000`
 
 5. Acesse a documentação da API no Swagger:
    ```
-   http://localhost:3000/docs
+   http://localhost:8000/docs
    ```
 
 ### Frontend
